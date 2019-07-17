@@ -3,7 +3,7 @@ import sys
 import csv
 
 # Read HTML file
-with open("stackoverflow.html", encoding="utf8") as stack_overflow_links:
+with open("stackoverflow.html") as stack_overflow_links:
     links = stack_overflow_links.read()
 
 
@@ -17,7 +17,7 @@ matches = re.findall(regex_links, links)
 # Check matches, print results
 # Read in links from answers.txt (hint...this is a CSV file),
 # save in list called 'answer_data'
-with open('answers.txt', encoding="utf8") as so_answers:
+with open('answers.txt') as so_answers:
     answers = so_answers.read().split(',')
     answer_data = [answer.replace('"', '') for answer in answers]
 
